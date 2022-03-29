@@ -13,6 +13,7 @@ public:
 	void update(sf::Time& elapsed);
 private:
 	sf::Sprite sprite_;
+	int fireTimer_ = 0;
 
 };
 
