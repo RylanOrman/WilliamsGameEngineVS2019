@@ -1,4 +1,5 @@
 #include "Meteor.h"
+#include "Explosion.h"
 
 const float SPEED = 0.25f;
 
@@ -15,11 +16,13 @@ void Meteor::handleCollision(GameObject& otherGameObject)
 	}
 
 	makeDead();
-
+	ExplosionPtr explosion = std::make_shared<Explosion>(sprite_.getPosition());
+	GAME.getCurrentScene().addGameObject(explosion);
 }
 
 Meteor::Meteor(sf::Vector2f pos)
 {
+	setCollisionCheckEnabled(true);
 	sprite_.setTexture(GAME.getTexture("Resources/meteor.png"));
 	sprite_.setPosition(pos);
 	assignTag("meteor");
@@ -45,5 +48,5 @@ void Meteor::update(sf::Time& elapsed)
 	}
 }
 
-// STOPPED AT Part 5: Meteor Shower!
+// STOPPED AT Part 8: Sound Effects
 // https://github.com/MichaelTMiyoshi/WilliamsGameEngineVS2019/blob/master/Game%20Engine%20Tutorial.pdf

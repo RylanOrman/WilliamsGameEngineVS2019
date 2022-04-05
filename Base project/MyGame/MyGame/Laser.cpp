@@ -10,6 +10,7 @@ sf::FloatRect Laser::getCollisionRect()
 Laser::Laser(sf::Vector2f pos)
 {
 	sprite_.setTexture(GAME.getTexture("Resources/laser.png"));
+	setCollisionCheckEnabled(true);
 	sprite_.setPosition(pos);
 	assignTag("laser");
 }

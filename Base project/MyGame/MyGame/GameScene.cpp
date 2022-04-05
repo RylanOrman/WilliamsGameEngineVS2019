@@ -9,4 +9,6 @@ GameScene::GameScene()
 
 	MeteorSpawnerPtr meteorSpawner = std::make_shared<MeteorSpawner>();
 	addGameObject(meteorSpawner);
+
 }
+
