@@ -2,6 +2,11 @@
 
 const float SPEED = 1.2f;
 
+sf::FloatRect Laser::getCollisionRect()
+{
+	return sprite_.getGlobalBounds(); 
+}
+
 Laser::Laser(sf::Vector2f pos)
 {
 	sprite_.setTexture(GAME.getTexture("Resources/laser.png"));
