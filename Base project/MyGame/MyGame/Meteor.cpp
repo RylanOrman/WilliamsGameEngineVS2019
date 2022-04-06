@@ -48,5 +48,5 @@ void Meteor::update(sf::Time& elapsed)
 	}
 }
 
-// STOPPED AT Part 8: Sound Effects
+// STOPPED AT Part 9: Keeypin score
 // https://github.com/MichaelTMiyoshi/WilliamsGameEngineVS2019/blob/master/Game%20Engine%20Tutorial.pdf
