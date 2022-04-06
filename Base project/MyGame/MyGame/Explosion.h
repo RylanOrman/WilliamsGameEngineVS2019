@@ -11,6 +11,8 @@ public:
 
 private:
 	void SetupExplsionAnimation();
+
+	sf::Sound boom_;
 };
 
 typedef std::shared_ptr<Explosion> ExplosionPtr;
