@@ -12,6 +12,8 @@ void Meteor::handleCollision(GameObject& otherGameObject)
 {
 	if (otherGameObject.hasTag("laser"))
 	{
+		GameScene& Scene = (GameScene&)GAME.getCurrentScene();			// IDK MAN
+		scene.increaseScore();
 		otherGameObject.makeDead();
 	}
 

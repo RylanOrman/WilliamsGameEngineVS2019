@@ -78,4 +78,9 @@
       <Filter>Resources</Filter>
     </Media>
   </ItemGroup>
+  <ItemGroup>
+    <Font Include="Resources\Courneuf-Regular.ttf">
+      <Filter>Resources</Filter>
+    </Font>
+  </ItemGroup>
 </Project>
