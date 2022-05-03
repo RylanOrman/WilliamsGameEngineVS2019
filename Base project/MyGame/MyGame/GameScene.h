@@ -11,8 +11,13 @@ class GameScene : public Scene {
 
   void increaseScore();
 
+  int getLives();
+
+  void decreaseLives();
+
 private:
 	int score_ = 0;
+	int lives_ = 5;
 };
 
 typedef std::shared_ptr<GameScene> GameScenePtr;

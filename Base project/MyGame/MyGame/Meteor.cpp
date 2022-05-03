@@ -1,5 +1,6 @@
 #include "Meteor.h"
 #include "Explosion.h"
+#include "GameScene.h"
 
 const float SPEED = 0.25f;
 
@@ -12,7 +13,7 @@ void Meteor::handleCollision(GameObject& otherGameObject)
 {
 	if (otherGameObject.hasTag("laser"))
 	{
-		GameScene& Scene = (GameScene&)GAME.getCurrentScene();			// IDK MAN
+		GameScene& scene = (GameScene&)GAME.getCurrentScene();			
 		scene.increaseScore();
 		otherGameObject.makeDead();
 	}
@@ -42,6 +43,9 @@ void Meteor::update(sf::Time& elapsed)
 
 	if (pos.x < sprite_.getGlobalBounds().width * -1)
 	{
+		GameScene& scene = (GameScene&)GAME.getCurrentScene();
+		scene.decreaseLives();
+		
 		makeDead();
 	}
 	else

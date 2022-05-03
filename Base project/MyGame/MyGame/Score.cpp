@@ -22,6 +22,7 @@ void Score::update(sf::Time& elapsed)
 
 	std::stringstream stream;
 	stream << "Score: " << scene.getScore();
+	stream << "\nLives: " << scene.getLives();
 
 	text_.setString(stream.str());
 }
